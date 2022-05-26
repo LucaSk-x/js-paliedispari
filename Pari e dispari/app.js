@@ -1,5 +1,11 @@
 let btn = document.getElementById("btn");
 let numeroUtente;
+let check;
+
+function generaNumero(min, max) {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1) ) + min;
+    return randomNumber;
+}
 
 btn.addEventListener ("click", function() {
     while (numeroUtente === undefined) {
@@ -13,12 +19,22 @@ btn.addEventListener ("click", function() {
         }
     }
 
-    function generaNumero(min, max) {
-        const randomNumber = Math.floor(Math.random() * (max - min + 1) ) + min;
-        return randomNumber;
-    }
+
+/*     while (check === undefined) {
+        let typeNumber = prompt("Scegli tra pari o dispari");
+    
+        if (typeNumber === "pari") {
+            check = typeNumber;
+        }else if (typeNumber === "dispari") {
+            check = typeNumber;
+        } else {
+            alert('inserisci "pari" o "dispari" ')
+        }
+    } */
 
     let somma = numeroUtente + generaNumero (1, 5);
+
+    if (somma % 2 === 0)
 
     console.log(generaNumero);
     console.log(somma);
